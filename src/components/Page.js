@@ -5,7 +5,7 @@ const Page = (props) => (
   <div>
     <section className="section">
       <h1 className='title has-text-centered'>{props.title}</h1>
-      <p className="box has-text-centered" style={{fontSize: '1.5em'}}>{props.text}</p>
+      <p className="box has-text-centered" style={{fontSize: '1.2em'}}>{props.text}</p>
       <div className="field is-grouped">
         <ul>
           <li>
