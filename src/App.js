@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Page from './components/Page';
 import Header from './components/Header';
+import createBrowserHistory from 'history/createBrowserHistory'
+
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+const history = createBrowserHistory()
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div>
           <Header />
           <Switch>
@@ -16,11 +19,9 @@ class App extends Component {
               ]}/>
             )}/>/>
             <Route exact path='/Q1' render={() => (
-              <Page title='1. Le droit commun' text="hjuhguhgruhgruhguhrugugrhugrhughr" buttons={[
-                { text: "dont touch me", url: "/Q2" },
-                { text: "bar", url: "/Q2" },
-                { text: "dont touch me please i'm just a button don't touch me !!!!", url: "/Q2" },
-                { text: "bar", url: "/Q2" },
+              <Page title='1. Le droit commun' text="La loi du 11 février 2005 donne les principaux axes d’égalité des droits et des chances des personnes handicapées, par la compensation du handicap, les ressources, la scolarité, l'accessibilité, la citoyenneté et enfin l’emploi.
+              En tant que personne en situation de handicap, vous pouvez bénéficier de l’allocation adulte handicapé (AAH), dès lors que vous présentez un certain taux d'incapacité. Il existe également des aides d’accès aux soins et au logement en établissement." info="blablabla" style={{backgroundImage:'url(./libra.png)',}} buttons={[
+                { text: "Continuer", url: "/Q2" },
               ]}/>
             )}/>
             <Route exact path='/Q2' render={() => (
@@ -47,8 +48,20 @@ class App extends Component {
             )}/>
             <Route exact path='/Q5-1' render={() => (
               <Page title='5. L’insertion' text="Votre contrat d’apprentissage vient de se terminer et vous voilà diplômé. Félicitations ! Votre patron propose de vous embaucher. Il peut toucher pour cela une aide à la pérennisation des contrats en alternance. Souhaitez-vous saisir cette opportunité ?" buttons={[
-                { text: "Oui, je veux continuer dans la même entreprise", url: "/Q" },
-                { text: "Non, j’ai envie de créer ma propre entreprise !", url: "/Q" },
+                { text: "Oui, je veux continuer dans la même entreprise", url: "/Q6" },
+                { text: "Non, j’ai envie de créer ma propre entreprise !", url: "/Q6" },
+              ]}/>
+            )}/>
+            <Route exact path='/Q5-2' render={() => (
+              <Page title='5. L’insertion' text="Pour entrer sur le marché du travail, vous pouvez bénéficier d’une aide à l’insertion professionnelle (AIP) de l’Agephip. Souhaitez-vous saisir cette opportunité ?" buttons={[
+                { text: "Oui, je veux bénéficier de l’AIP", url: "/Q6" },
+                { text: "Non, j’ai envie de créer ma propre entreprise", url: "/Q6" },
+              ]}/>
+            )}/>
+            <Route exact path='/Q6' render={() => (
+              <Page title='6. Votre premier emploi !' text="Félicitations ! Il vous a fallu remplir beaucoup de paperasse pour y arriver, mais vous voilà en poste ! Que vous ayez intégré une entreprise ou créé la vôtre, vous pouvez désormais bénéficier d’une aide à l’adaptation de situation de travail : aide auditive, visuelle, matériel adapté, aide à l’auxiliariat, etc. Data ? " buttons={[
+                { text: "Oui, je veux bénéficier de l’AIP", url: "/Q7" },
+                { text: "Non, j’ai envie de créer ma propre entreprise", url: "/Q7" },
               ]}/>
             )}/>
           </Switch>

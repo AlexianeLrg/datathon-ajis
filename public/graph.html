@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>Taux d'emploi légal dans la fonction publique</title>
+
+   <meta name="description" content="" />
+
+
+
+    <style>
+
+      #container {
+
+        height: 300px;
+
+        min-width: 70px;
+
+        margin: 0 auto;
+
+      }
+
+    </style>
+
+    </head>
+
+  <body>
+
+
+
+
+
+    <div id="container"></div>
+
+
+
+
+
+
+
+          <div style="background-color:#2d3539; color:white;font-size:12px;text-align:right;font-family: 'ProximaNovaExCnMedium', sans-serif !important; ">
+
+                 Source : rapport annuel 2015 FIPHFP </div>
+
+
+
+
+
+    <script src="https://www.alternatives-economiques.fr/sites/default/files/iframe/infographie/js/altereco.charts.min.js?v=1.2.0"></script>
+
+
+
+    <script>
+
+      domready(function() {
+
+        Highcharts.setOptions({
+
+          //couleurs alternatives
+
+          colors: [ "#ffeb00", "#A76766", "#7DB5CD", "#D5B872", "#DF4949",  "#B1BA75"," #6F9870", "#91A8B3", "#7798BF", "#aaeeee"],
+
+
+
+          //couleurs chartées
+
+          //  colors: ["rgba(255,205,0,1)", "rgba(45,53,57,1)", "rgba(223,73,73,1)", "rgba(69,178,157,1)", "rgba(226,122,63,1)", "#eeaaee",  "#979b9c","#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+
+          // "rgba(255,205,0,1)" = jaune , rgba(45,53,57,1) = gris, "rgba(223,73,73,1)" =rouge, "rgba(69,178,157,1)" = vert, rgba(226,122,63,1) = orange
+
+          // pour jouer sur l'opacité d'une couleur il suffit de remplacer le 1 (dernier chifre) par un 0.8(= opacité à 80%) ou 0.5 (= opacité à 50%)
+
+        });
+
+
+
+        var chart = new Highcharts.Chart({
+
+          chart: {
+
+            renderTo: document.querySelector('#container'),
+
+            type: 'line'
+
+          },
+
+
+
+          title: {
+
+            text: 'Taux d’emploi légal des personnes handicapées dans la fonction publique (en %) '
+
+
+
+          },
+
+
+
+
+
+          xAxis: {
+
+            categories: ["2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"],
+
+
+
+            // rotation du texte de l'axis x
+
+            //	startOnTick: true, labels: {rotation: -90, step: 2, showFirstLabel: true, showLastLabel: true}
+
+
+
+
+
+            // zone de mise en avant d'une zone vertical
+
+            // plotBands: [{ color: 'rgba(151,152,156, .25)',
+
+            //	label: {
+
+            //			text:'titre de la zone',
+
+            //    		align: 'left',
+
+            //    		x: 10,
+
+            //			y:155,
+
+            //		 	},
+
+
+
+            //            from: 2,// début de la zone
+
+            //			to:5	// fin de la zone
+
+            //	}],
+
+
+
+          },
+
+
+
+          yAxis: {
+
+            // Pour mettre un suffixe sur les valeurs de l'axis Y
+
+            //labels: {format: '{value} %'}, // remplacer le '%' par le suffixe voulu
+
+
+
+            // option pour designer le nombre maximum et le minimun // Sinon ils sont générés automatiquement
+
+            //	ceiling: 25,
+
+            //		floor: -10,
+
+
+
+
+
+            // zone de mise en avant  d'une zone horizontal
+
+            //    	plotBands: [{
+
+            //                	color: 'rgba(151,152,156, .25)',
+
+            //					label: {
+
+            //							text:'titre de la zone',
+
+            //                    		align: 'left',
+
+            //                    		x: 0,
+
+            //							y:0,
+
+            //               			 	},
+
+            //
+
+            //			                from: 2,// début de la zone
+
+            //               				to:5	// fin de la zone
+
+            //            		}],
+
+
+
+
+
+
+
+          },
+
+
+
+
+
+
+
+          // option pour les lignes
+
+          plotOptions: {
+
+            series: {
+
+              animation: {
+
+                duration: 2000,
+
+                easing: "easeOutBounce"
+
+              },
+
+              animation: {
+
+                duration: 2000,
+
+                easing: "easeOutBounce"
+
+              },
+
+              // pour réduire l'épaisseur de la ligne
+
+              //	lineWidth: 3,
+
+
+
+              // pour afficher ou non les points sur la ligne
+
+              marker: {
+
+                enabled: false // false = non, true = oui
+
+              }
+
+            }
+
+          },
+
+
+
+          // option pour les infobulles
+
+          tooltip: {
+
+            valueSuffix: ' %', // suffixe des valeurs
+
+            crosshairs: true, // trait vertical en hover // false = non, true = oui
+
+            shared: true // une infobulle pour les valeurs par catégorie // false = non, true = oui
+
+          },
+
+
+
+
+
+          legend: {
+
+             enabled: false // supprimer la légende
+
+
+
+            // positionner la légende au milieu à droite
+
+            //   layout: 'vertical', align: 'right', verticalAlign: 'middle',
+
+          },
+
+
+
+
+
+          // entrée des données
+
+          series: [{
+
+
+
+            name: 'Taux d’emploi légal des personnes handicapées', // Attention si il y a une apostrophe dans le nom il faut mettre un antislash avant. ex 'l'héritage' s'écrit l\'héritage'
+
+            //le format des chiffres est le format anglais: la virgule est un point.
+
+            data: [3.74,4,4.21,4.38,3.99,4.22,4.39,4.64,4.9,5.17],
+
+
+
+
+
+
+
+
+
+          }]
+
+        });
+
+      });
+
+    </script>
+
+</body>
+
+</html>

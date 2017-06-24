@@ -3,10 +3,10 @@ import ButtonQuestion from './Button';
 
 const Page = (props) => (
   <div>
-    <section className="section">
+    <section className="section" style={props.style}>
       <h1 className='title has-text-centered'>{props.title}</h1>
       <p className="box has-text-centered" style={{fontSize: '1.2em'}}>{props.text}</p>
-      <div className="field is-grouped">
+      <div className="field is-grouped" >
         <ul>
           <li>
             {props.buttons.map(b => (<ButtonQuestion url={b.url} text={b.text}/>))}
@@ -18,9 +18,7 @@ const Page = (props) => (
           <p>Le saviez-vous?</p>
           <button className="delete"></button>
         </div>
-        <div className="message-body">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-        </div>
+        <div className="message-body">{props.info}</div>
       </article>
     </section>
   </div>
