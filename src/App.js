@@ -20,7 +20,7 @@ class App extends Component {
             )}/>/>
             <Route exact path='/Q1' render={() => (
               <Page title='1. Le droit commun' text="La loi du 11 février 2005 donne les principaux axes d’égalité des droits et des chances des personnes handicapées, par la compensation du handicap, les ressources, la scolarité, l'accessibilité, la citoyenneté et enfin l’emploi.
-              En tant que personne en situation de handicap, vous pouvez bénéficier de l’allocation adulte handicapé (AAH), dès lors que vous présentez un certain taux d'incapacité. Il existe également des aides d’accès aux soins et au logement en établissement." info="TODO" buttons={[
+              En tant que personne en situation de handicap, vous pouvez bénéficier de l’allocation adulte handicapé (AAH), dès lors que vous présentez un certain taux d'incapacité. Il existe également des aides d’accès aux soins et au logement en établissement." buttons={[
                 { text: "Continuer", url: "/Q2" },
               ]}/>
             )}/>
