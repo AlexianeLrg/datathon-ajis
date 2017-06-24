@@ -48,7 +48,7 @@ class App extends Component {
             <Route exact path='/Q5-1' render={() => (
               <Page title='5. L’insertion' text="Votre contrat d’apprentissage vient de se terminer et vous voilà diplômé. Félicitations ! Votre patron propose de vous embaucher. Il peut toucher pour cela une aide à la pérennisation des contrats en alternance. Souhaitez-vous saisir cette opportunité ?" buttons={[
                 { text: "Oui, je veux continuer dans la même entreprise", url: "/Q" },
-                { text: "Non, j’ai envie de créer ma propre entreprise !", url: "/Q2" },
+                { text: "Non, j’ai envie de créer ma propre entreprise !", url: "/Q" },
               ]}/>
             )}/>
           </Switch>

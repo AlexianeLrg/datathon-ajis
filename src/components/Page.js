@@ -1,17 +1,11 @@
 import React from 'react';
 import ButtonQuestion from './Button';
 
-const colorInfo = {
-  backgroundColor: '#900C3F',
-};
-const question = {
-  fontSize: '1.5em',
-}
 const Page = (props) => (
   <div>
     <section className="section">
       <h1 className='title has-text-centered'>{props.title}</h1>
-      <p className="box has-text-centered" style={question}>{props.text}</p>
+      <p className="box has-text-centered" style={{fontSize: '1.5em'}}>{props.text}</p>
       <div className="field is-grouped">
         <ul>
           <li>
@@ -20,7 +14,7 @@ const Page = (props) => (
         </ul>
       </div>
       <article className="message">
-        <div className="message-header has-text-centered" style={colorInfo}>
+        <div className="message-header has-text-centered" style={{backgroundColor: '#900C3F'}}>
           <p>Le saviez-vous?</p>
           <button className="delete"></button>
         </div>
