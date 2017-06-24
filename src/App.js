@@ -3,13 +3,13 @@ import Page from './components/Page';
 import Header from './components/Header';
 import createBrowserHistory from 'history/createBrowserHistory'
 
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router,HashRouter, Route, Switch} from 'react-router-dom';
 
 const history = createBrowserHistory()
 class App extends Component {
   render() {
     return (
-      <Router history={history}>
+      <HashRouter history={history}>
         <div>
           <Header />
           <Switch>
@@ -20,7 +20,7 @@ class App extends Component {
             )}/>/>
             <Route exact path='/Q1' render={() => (
               <Page title='1. Le droit commun' text="La loi du 11 février 2005 donne les principaux axes d’égalité des droits et des chances des personnes handicapées, par la compensation du handicap, les ressources, la scolarité, l'accessibilité, la citoyenneté et enfin l’emploi.
-              En tant que personne en situation de handicap, vous pouvez bénéficier de l’allocation adulte handicapé (AAH), dès lors que vous présentez un certain taux d'incapacité. Il existe également des aides d’accès aux soins et au logement en établissement." info="blablabla" style={{backgroundImage:'url(./libra.png)',}} buttons={[
+              En tant que personne en situation de handicap, vous pouvez bénéficier de l’allocation adulte handicapé (AAH), dès lors que vous présentez un certain taux d'incapacité. Il existe également des aides d’accès aux soins et au logement en établissement." info="blablabla" buttons={[
                 { text: "Continuer", url: "/Q2" },
               ]}/>
             )}/>
@@ -66,7 +66,7 @@ class App extends Component {
             )}/>
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }

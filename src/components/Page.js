@@ -3,7 +3,7 @@ import ButtonQuestion from './Button';
 
 const Page = (props) => (
   <div>
-    <section className="section" style={props.style}>
+    <section className="section" >
       <h1 className='title has-text-centered'>{props.title}</h1>
       <p className="box has-text-centered" style={{fontSize: '1.2em'}}>{props.text}</p>
       <div className="field is-grouped" >
