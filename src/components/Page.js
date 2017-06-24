@@ -7,8 +7,8 @@ const Page = (props) => (
       <h1 className='title has-text-centered'>{props.title}</h1>
       <p className="box has-text-centered" style={{fontSize: '1.2em'}}>{props.text}</p>
       <div className="field is-grouped" >
-        <ul>
-          <li>
+        <ul style={{ 'width': '100%' }}>
+          <li style={{ 'width': '100%' }}>
             {props.buttons.map(b => (<ButtonQuestion url={b.url} text={b.text}/>))}
           </li>
         </ul>
