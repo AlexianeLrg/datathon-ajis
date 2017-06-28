@@ -40,7 +40,7 @@ class App extends Component {
               ]}/>
             )}/>
             <Route exact path='/Q4' render={() => (
-              <Page title='4. Comment me former ? ' text="Il faut maintenant choisir le type d’études que vous allez faire. L’Agephip propose aux jeunes handicapés une aide au contrat d’apprentissage. Souhaitez-vous en bénéficier ?" buttons={[
+              <Page title='4. Comment me former ? ' text="Il faut maintenant choisir le type d’études que vous allez faire. L’Agefiph propose aux jeunes handicapés une aide au contrat d’apprentissage. Souhaitez-vous en bénéficier ?" buttons={[
                 { text: "Oui, je veux étudier en apprentissage", url: "/Q5-1" },
                 { text: "Non, je souhaite poursuivre d’autres études", url: "/Q5-2" },
                 { text: "Non, je ne veux pas faire d’études", url: "/Q5-2" },
@@ -53,13 +53,13 @@ class App extends Component {
               ]}/>
             )}/>
             <Route exact path='/Q5-2' render={() => (
-              <Page title='5. L’insertion' text="Pour entrer sur le marché du travail, vous pouvez bénéficier d’une aide à l’insertion professionnelle (AIP) de l’Agephip. Souhaitez-vous saisir cette opportunité ?" buttons={[
+              <Page title='5. L’insertion' text="Pour entrer sur le marché du travail, vous pouvez bénéficier d’une aide à l’insertion professionnelle (AIP) de l’Agefiph. Souhaitez-vous saisir cette opportunité ?" buttons={[
                 { text: "Oui, je veux bénéficier de l’AIP", url: "/Q6" },
                 { text: "Non, j’ai envie de créer ma propre entreprise", url: "/Q6" },
               ]}/>
             )}/>
             <Route exact path='/Q6' render={() => (
-              <Page title='6. Votre premier emploi !' text="Félicitations ! Il vous a fallu remplir beaucoup de paperasse pour y arriver, mais vous voilà en poste ! Que vous ayez intégré une entreprise ou créé la vôtre, vous pouvez désormais bénéficier d’une aide à l’adaptation de situation de travail : aide auditive, visuelle, matériel adapté, aide à l’auxiliariat, etc. Data ? " buttons={[
+              <Page title='6. Votre premier emploi !' text="Félicitations ! Il vous a fallu remplir beaucoup de paperasse pour y arriver, mais vous voilà en poste ! Que vous ayez intégré une entreprise ou créé la vôtre, vous pouvez désormais bénéficier d’une aide à l’adaptation de situation de travail : aide auditive, visuelle, matériel adapté, aide à l’auxiliariat, etc. " buttons={[
                 { text: "Oui, je veux bénéficier de l’AIP", url: "/Q7" },
                 { text: "Non, j’ai envie de créer ma propre entreprise", url: "/Q7" },
               ]}/>
